@@ -19,31 +19,26 @@ if(isset($_POST['submit'])){
         }
     }
 }
-
-
-add_shortcode( 'search-form-test', 'wpc_shortcode_search_form' );
-function wpc_shortcode_search_form() {
-    return '<h1>Add request</h1>
-		<form method="post" action="">
-		    <table>
-		        <tr>
-		            <td>Name</td>
-		            <td><input type="text" name="name"></td>
-		        </tr>
-		        <tr>
-		            <td>Email</td>
-		            <td><input type="text" name="email"></td>
-		        </tr>
-		        <tr>
-		            <td>Phone</td>
-		            <td><input type="text" name="phone"></td>
-		        </tr>
-		        <input type="hidden" name="date" value="'.date("d-m-y h:i:s").'">
-		        <tr>
-		            <td>&nbsp;</td>
-		            <td><input type="submit" name="submit" value="Add"></td>
-		        </tr>
-		    </table>
-		</form>';
-	}
 ?>
+<h1>Add request</h1>
+<form method='post' action=''>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><input type='text' name='name'></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type='text' name='email'></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td><input type='text' name='phone'></td>
+        </tr>
+        <input type='hidden' name='date' value='<?php echo date('d-m-y h:i:s'); ?>'>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type='submit' name='submit' value='Add'></td>
+        </tr>
+    </table>
+</form>
